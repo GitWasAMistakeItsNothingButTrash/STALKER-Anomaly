@@ -4,8 +4,8 @@ Goals:
 ![Stalker_faction_relations_differential.png](https://github.com/GitWasAMistakeItsNothingButTrash/STALKER-Anomaly/blob/master/Stalker_faction_relations_differential%20-%20Copy.png)
   (As with DrX Dynamic Faction Relations, this is not compatible with Story Mode)
 
-- Combine radio stations into one and remove western and otherwise degenerate shit * cough * tATu * cough *
+- Remove nazi (Firelake), pederast (tATu) and other degenerate/western cancer from the soundtrack, reorganize the radio stations into one lyrical and one intstrumental
 
-- Remove (or pacify) silly monsters
+- Remove silly monsters
 
 - Correct loadouts so factions use appropriate weapons and ammo

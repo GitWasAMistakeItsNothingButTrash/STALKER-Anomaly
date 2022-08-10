@@ -4,8 +4,10 @@
 ![Stalker_faction_relations_differential.png](https://github.com/GitWasAMistakeItsNothingButTrash/STALKER-Anomaly/blob/master/Stalker_faction_relations_differential%20-%20Copy.png)
   (As with DrX Dynamic Faction Relations, this is not compatible with Story Mode)
 
-- Remove nazi (Addaraya, Firelake, Shnur), pederast (Shnur, tATu) and other degenerate/western cancer from the soundtrack, and reorganize the radio stations into one lyrical and one intstrumental *Done*
+- Remove nazi (Addaraya, Firelake, Shnur), pederast (Shnur, tATu) and other degenerate/western cancer from the soundtrack *Done*
 
-- Remove silly monsters (e.g. burers, controllers, fractures, poltergeists, psy-dogs, pyrogeists, snorks, zombies)
+- Reorganize radio stations into one lyrical and one intstrumental *Done*
 
-- Correct loadouts so factions use appropriate weapons and ammo
+- Remove redundant and silly monsters (e.g. burers, controllers, fractures, poltergeists, psy-dogs, pyrogeists, snorks, zombies)
+
+- Edit loadouts so factions use weapons and ammo that make some semblance of sense

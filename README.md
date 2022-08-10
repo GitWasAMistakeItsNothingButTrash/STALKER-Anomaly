@@ -8,6 +8,6 @@
 
 - Reorganize radio stations into one lyrical and one intstrumental *Done*
 
-- Remove redundant and silly monsters (e.g. burers, controllers, fractures, poltergeists, psy-dogs, pyrogeists, snorks, zombies)
+- Remove redundant (e.g. fractures, karliks, snorks, zombies) and silly monsters (e.g. burers, controllers, poltergeists, psy-dogs, psy-suckers, pyrogeists)
 
 - Edit loadouts so factions use weapons and ammo that make some semblance of sense

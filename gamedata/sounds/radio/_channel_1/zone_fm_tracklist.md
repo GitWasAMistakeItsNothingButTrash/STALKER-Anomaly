@@ -6,14 +6,9 @@ Anna German - Kogda Zvely Sadi
 
 Aria - Bespechny Angel
 
-
 Aria - Oskolok Lda
 
 Bandit Mazurka (vocal)
-
-Bi-2 - Moy Rok 'n' Roll
-
-Bi-2 - Zazhigat
 
 Korsika - Neverland
 

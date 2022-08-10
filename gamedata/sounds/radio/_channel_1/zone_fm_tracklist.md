@@ -39,8 +39,6 @@ Mikhail Shufutinsky - Moskva-Vladivostok
 
 Samotsvety - Uvizu Tebya Ya v Tundru
 
-Sergey Shnurov - Alkoholik
-
 Zemlyane - Trava u Doma
 
 Zhanna Aguzarova - Orel

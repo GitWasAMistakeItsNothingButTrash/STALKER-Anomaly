@@ -1,7 +1,7 @@
 ## Goals:
 
 - Correct faction relations to make some semblance of sense:
-![Stalker_faction_relations_differential.png](https://github.com/GitWasAMistakeItsNothingButTrash/STALKER-Anomaly/blob/master/Stalker_faction_relations_differential.png)
+![STALKER_faction_relations_differential.png](https://github.com/GitWasAMistakeItsNothingButTrash/STALKER-Anomaly/blob/master/STALKER_faction_relations_differential.png)
   (As with DrX Dynamic Faction Relations, this is not compatible with Story Mode.) \
   *Done*
 

@@ -8,7 +8,7 @@
 - Remove nazi (Addaraya, Bi-2, Firelake, Shnur), pederast (Shnur, tATu) and other western (America, Blue States, Croce, Dazeem, Dire Straits, Eagles, Hendrix, Pink Floyd, Radiohead, Scorpions, Soulsavers, Tito & Tarantula, U2, Vaughan) cancer from the soundtrack. \
   *Done*
 
-- Reorganize radio stations into one lyrical and one intstrumental. \
+- Reorganize radio stations into one lyrical and one instrumental. \
   *Done*
 
 - Remove creatures that are silly (such as those with psy abilities, such as telekinesis, possession, invisibility or spawning phantoms) or redundant (all variants of human zombies that are classed as monsters rather than stalkers). \

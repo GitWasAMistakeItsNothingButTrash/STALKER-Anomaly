@@ -8,11 +8,11 @@
 
 - Remove nazi (Addaraya, Bi-2, Firelake, Shnur), pederast (Shnur, tATu) and western cancer from the soundtrack.
 
-*Done*
+  *Done*
 
 - Reorganize radio stations into one lyrical and one intstrumental.
 
-*Done*
+  *Done*
 
 - Remove creatures that are silly (such as those with psy abilities, such as telekinesis, possession, invisibility or spawning phantoms) or redundant (all variants of human zombies that are classed as monsters rather than stalkers).
 

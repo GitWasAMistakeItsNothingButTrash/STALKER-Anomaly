@@ -5,7 +5,7 @@
   (As with DrX Dynamic Faction Relations, this is not compatible with Story Mode.) \
   *Done*
 
-- Remove nazi (Addaraya, Bi-2, Firelake, Shnur), pederast (Shnur, tATu) and other western (America, Blue States, Croce, Dazeem, Dire Straits, Eagles, Jimi Hendrix, Pink Floyd, Radiohead, Scorpions, Soulsavers, Tito & Tarantula, U2, Vaughan) cancer from the soundtrack. \
+- Remove nazi (Addaraya, Bi-2, Firelake, Shnur), pederast (Shnur, tATu) and other western (America, Blue States, Croce, Dazeem, Dire Straits, Eagles, Hendrix, Pink Floyd, Radiohead, Scorpions, Soulsavers, Tito & Tarantula, U2, Vaughan) cancer from the soundtrack. \
   *Done*
 
 - Reorganize radio stations into one lyrical and one intstrumental. \

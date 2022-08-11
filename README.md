@@ -3,13 +3,13 @@
 - Correct faction relations to make some semblance of sense:
 ![Stalker_faction_relations_differential.png](https://github.com/GitWasAMistakeItsNothingButTrash/STALKER-Anomaly/blob/master/Stalker_faction_relations_differential%20-%20Copy.png)
   (As with DrX Dynamic Faction Relations, this is not compatible with Story Mode.)
-//  *Done*
+\n  *Done*
 
 - Remove nazi (Addaraya, Bi-2, Firelake, Shnur), pederast (Shnur, tATu) and western cancer from the soundtrack.
-//  *Done*
+\n  *Done*
 
 - Reorganize radio stations into one lyrical and one intstrumental.
-//  *Done*
+\n  *Done*
 
 - Remove creatures that are silly (such as those with psy abilities, such as telekinesis, possession, invisibility or spawning phantoms) or redundant (all variants of human zombies that are classed as monsters rather than stalkers).
 

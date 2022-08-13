@@ -406,6 +406,213 @@ stand_attack_0	=	  	0.25,		0.41,		    35,        0.0, 1.0, 1.0,		 -1.0, 1.0, -1.
 run_jamp_1		=		0.55,		0.88,		    90,        0.0, 1.0, 4.0,		 -1.8, 1.8, -1.8, 1.8,								  1.0
 
 
+;---------------------------------------------------------------------------------
+;-- PSY DOG
+;---------------------------------------------------------------------------------
+[psy_dog_aura_effector]
+duality_h		= 0.00
+duality_v		= 0.00
+blur			= 0
+gray			= 0.0
+noise_intensity = 0.0
+noise_grain		= 0
+noise_fps		= 30
+color_base		= 0.9,0.9,1.0
+color_gray		= 0.33,0.330,0.33
+color_add		= 0.00,0.00,0.015
+
+
+[psy_dog]:pseudodog_normal
+$spawn				= "monsters\psy_dog\psy_dog"
+visual				= monsters\pseudodog\pseudodog_grey
+corpse_visual		 = monsters\pseudodog\pseudodog_grey_dead
+icon				= ui_npc_monster_pseudodog_grey
+panic_threshold		= 0.001
+class               = SM_DOG_P
+attack_params		= psy_dog_attack_params
+
+aura_effector		= psy_dog_aura_effector
+Phantoms_Count	= 0
+Time_Phantom_Respawn = 9999
+
+
+;-------------------------------------------------------------------------
+; Anti-aim Ability
+;-------------------------------------------------------------------------
+anti_aim_timeout				=	0 ; sec
+anti_aim_effectors				=	anti_aim_effector
+anti_aim_animation				=	stand_attack_ 
+anti_aim_max_angle				=	0.0
+anti_aim_detection_gain_speed	=	10
+anti_aim_detection_loose_speed	=	0.05
+
+;------------------------------------------------------------------------
+; Influences
+;------------------------------------------------------------------------
+
+psy_linear_factor		=	0.9
+psy_quadratic_factor	=	0
+psy_max_distance		=	23.0
+psy_max_power			=	4.5
+psy_sound				=	anomaly\psy_voices_1_l		;monsters\controller\controller_presence_l
+psy_pp_effector_name	= 	psy_antenna 				;postprocess_psi
+psy_pp_highest_at		= 	0.05
+
+
+[psy_dog_attack_params]
+;---------------------------------------------------------------------------------------------------------------------------------------------
+;	anim			| time[0..1] | hit_power | impulse | impulse_dir (x,y,z)  |	Field of hit_test  (left,right, top, bottom) |	Test Dist
+;---------------------------------------------------------------------------------------------------------------------------------------------
+;Bite
+stand_attack_0	=	  	0.25,		0.52,		    35,        0.0, 1.0, 1.0,		 -1.0, 1.0, -1.0, 1.0,								  1.6
+;Jump attack
+run_jamp_1		=		0.55,		0.98,		    90,        0.0, 1.0, 4.0,		 -1.8, 1.8, -1.8, 1.8,								  1.0
+
+;---------------------------------------------------------------------------------
+;-- PSY DOG PHANTOM
+;---------------------------------------------------------------------------------
+;=========================================================================================
+; Appear Effector
+;=========================================================================================
+[psy_dog_phantom_appear_effector]
+duality_h		= 0.0	;0.31
+duality_v		= 0.0	;0.31
+blur			= 0.0
+gray			= 0	;0.5
+noise_intensity = 0
+noise_grain		= 0.0
+noise_fps		= 30
+color_base		= 0.5,0.5,0.5	;0.1,0.15,0.4
+color_gray		= 0.333,0.333,0.333	;0.333,0.333,0.333
+color_add		= 0.00,0.00,0.00
+time			= 0.0		;1.5
+time_attack		= 0.0	;0.5		; fade in
+time_release	= 0.0		; fade out
+
+; camera effects
+ce_time				= 0 ;0.2	;1.5
+ce_amplitude		= 0 ;1.0
+ce_period_number	= 0	;2.0
+ce_power			= 0 ;0.3 ;0.7
+
+DayTime_Begin		= 20	;6			; ����v� ��� �v� �������
+DayTime_End			= 5		; ����� ��� �v� �������
+
+;=========================================================================================
+; Base Definition
+;=========================================================================================
+[psy_dog_phantom]:pseudodog_normal
+$spawn				= "monsters\psy_dog\psy_dog_phantom"
+visual				= monsters\pseudodog\pseudodog_grey
+icon				= ui_npc_monster_pseudodog_grey
+class               = SM_DOG_F
+rank				= 1
+
+;jump_delay					= 3000 ;3000
+;jump_factor					= 3
+;jump_min_distance			= 4.0
+;jump_max_distance			= 10.0
+;jump_max_angle				= 0.2
+
+appear_effector		= psy_dog_phantom_appear_effector
+particles_appear	= monsters\pseudo_phantom_birth_00
+particles_disappear	= monsters\pseudo_phantom_death_00
+attack_params		= psydog_attack_params_phantom
+
+hit_type = telepatic 
+
+[psydog_attack_params_phantom]
+;---------------------------------------------------------------------------------------------------------------------------------------------
+;	anim			| time[0..1] | hit_power | impulse | impulse_dir (x,y,z)  |	Field of hit_test  (left,right, top, bottom) |	Test Dist
+;---------------------------------------------------------------------------------------------------------------------------------------------
+;Bite
+stand_attack_0	=	  	0.25,		0.35,		    10,        0.0, 1.0, 1.0,		 -1.0, 1.0, -1.0, 1.0,								  1.6
+;Jump attack
+run_jamp_1		=		0.55,		0.6,			10,        0.0, 1.0, 4.0,		 -1.8, 1.8, -1.8, 1.8,								  1.0
+
+;=========================================================================================
+[zat_b18_dog]:pseudodog_normal
+$spawn				= "monsters\psy_dog\zat_b18_dog"
+visual				 = monsters\up_monsters\pseudodog_noah
+community				= pseudodog
+
+;-------------------------------------------------------------------------
+; Vision
+;-------------------------------------------------------------------------
+eye_fov				 = 3	;150
+eye_range			 = 1	;100
+
+vision_free_section			= zat_b18_dog_vision_free
+vision_danger_section		= zat_b18_dog_vision_danger
+
+; �������� visibility_threshold ������ ���� ����� ��� ������� � ���,
+; ����� ��������� ��������� � ������� ��������� ��� �������� �� ������� �� ���.
+
+[zat_b18_dog_vision_free]
+min_view_distance   		= 0.1				; �����������, �����v� �������� �� eye_range, � ����������� �� ����
+max_view_distance	 		= 0.2				; �����������, �����v� �������� �� eye_range, � ����������� �� ����
+visibility_threshold	 	= 70.0				; ��������, ��� ���������� ������ �������� ������ ��������� �����v�
+always_visible_distance 	= 0.001
+time_quant					= 0.001
+decrease_value				= 0.01				; ��������, �� ������� ����������� ���, ���� ������ ����� � �������, �� ������� �� �����-�� ��������
+velocity_factor		     	= 0.4
+luminocity_factor			= 0.5 				; ������ ��������� (������ ��� ������)
+transparency_threshold		= 0.10
+
+[zat_b18_dog_vision_danger]
+min_view_distance   		= 0.1				; �����������, �����v� �������� �� eye_range, � ����������� �� ����
+max_view_distance	 		= 0.2				; �����������, �����v� �������� �� eye_range, � ����������� �� ����
+visibility_threshold	 	= 60.0				; ��������, ��� ���������� ������ �������� ������ ��������� �����v�
+always_visible_distance 	= 0.001
+time_quant					= 0.001
+decrease_value				= 0.01				; ��������, �� ������� ����������� ���, ���� ������ ����� � �������, �� ������� �� �����-�� ��������
+velocity_factor		     	= 0.4
+luminocity_factor			= 0.5 				; ������ ��������� (������ ��� ������)
+transparency_threshold		= 0.10
+
+feel_enemy_who_just_hit_max_distance = 350
+
+radiation_max_distance		=	0
+
+;----------------------------------------------------------------------------
+; Movement::Velocities & Acceleration
+;----------------------------------------------------------------------------
+; speed factors			linear | angular_real | angular_path | min |  max
+Velocity_Stand			= 0,		3.0,			3.0,     	1,		1
+Velocity_RunFwdNormal	= 6.6,		5.0,			5.0,		0.05,	1.0
+Velocity_RunFwdDamaged	= 4.3,  	5.0,			5.0,		0.5,	1.0
+Velocity_WalkFwdNormal	= 5.0,		5.0,			5.0,		0.1,	1.0
+Velocity_WalkFwdDamaged	= 2.2,		6.0,			6.0,		0.1,	2.2
+
+;---------------------------------------------------------
+; Sounds and sound parameters
+;---------------------------------------------------------
+sound_idle				= ; monsters\pseudodog\pdog_idle_
+sound_eat				= ; monsters\pseudodog\pdog_chew_
+sound_aggressive		= ; monsters\pseudodog\pdog_aggression_
+sound_attack_hit		= ; monsters\pseudodog\pdog_attack_
+sound_take_damage		= ; monsters\pseudodog\pdog_hurt_
+sound_die				= ; monsters\pseudodog\pdog_death_
+sound_bkgnd				= ; monsters\biting\def_
+sound_threaten			= ; monsters\pseudodog\pdog_threaten_
+sound_landing			= ; monsters\biting\def_
+sound_steal				= ; monsters\biting\def_
+sound_panic				= ; monsters\biting\def_
+sound_growling			= ; monsters\biting\def_
+sound_psy_attack		= ; monsters\pseudodog\psy_attack_
+sound_die_in_anomaly	= ; monsters\pseudodog\pdog_death_
+;mlr
+[zat_b18_dog_little_m]:zat_b18_dog
+$spawn				= "monsters\psy_dog\zat_b18_dog_little"
+visual				= monsters\pseudodog\pseudodog_small
+corpse_visual		 = monsters\pseudodog\pseudodog_small_dead
+MaxHealthValue		     = 0.75			; range [0..200]
+
+[zat_b18_dog_little_two_m]:zat_b18_dog
+$spawn				= "monsters\psy_dog\zat_b18_dog_little_two"
+visual				= monsters\pseudodog\pseudodog_small
+corpse_visual		 = monsters\pseudodog\pseudodog_small_dead
+MaxHealthValue		     = 0.75			; range [0..200]
 
 ;mlr
 ;*********************************************************************************

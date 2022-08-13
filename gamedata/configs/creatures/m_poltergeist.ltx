@@ -103,8 +103,8 @@ Velocity_Drag			= 0.6,		3.0,			3.0,		1,		1
 Velocity_Steal			= 1.5,		3.0,			3.0,		1,		1
 
 ; Speed factors while invisible
-;Velocity_Invisible_Linear		= 0
-;Velocity_Invisible_Angular		= 0
+Velocity_Invisible_Linear		= 0
+Velocity_Invisible_Angular		= 0
 
 ; acceleration
 Accel_Generic			= 	1.5
@@ -235,11 +235,11 @@ damage					= m_poltergeist_damage
 
 ;---------------------------
 
-;Invisible_Energy_Restore_Velocity				= 0.0
-;Invisible_Energy_Decline_Velocity				= 1.0
-;Invisible_Energy_Critical_Value					= 0.01
-;Invisible_Energy_Activate_Value					= 0.99
-;Invisible_Energy_Aggressive_Restore_Velocity	= 0.0
+Invisible_Energy_Restore_Velocity				= 0.0
+Invisible_Energy_Decline_Velocity				= 1.0
+Invisible_Energy_Critical_Value					= 0.01
+Invisible_Energy_Activate_Value					= 0.99
+Invisible_Energy_Aggressive_Restore_Velocity	= 0.0
 
 Particles_Damage				= monsters\polter_damage
 Particles_Death					= monsters\polter_death_00
@@ -248,17 +248,17 @@ Particles_Hidden				= monsters\polter_linza_00
 
 ;-- Delays -------------------
 
-;Delay_Flame_Min			= 30000
-;Delay_Flame_Normal		= 30001
-;Delay_Flame_Aggressive	= 30001
+Delay_Flame_Min			= 30000
+Delay_Flame_Normal		= 30000
+Delay_Flame_Aggressive	= 30000
 
-;Delay_Tele_Min			= 0   ;100
-;Delay_Tele_Normal		= 100 ;300
-;Delay_Tele_Aggressive	= 10  ;200
+Delay_Tele_Min			= 30000   ;100
+Delay_Tele_Normal		= 30000 ;300
+Delay_Tele_Aggressive	= 30000  ;200
 
-;Delay_Scare_Min			= 30000
-;Delay_Scare_Normal		= 30001
-;Delay_Scare_Aggressive	= 30001
+Delay_Scare_Min			= 30000
+Delay_Scare_Normal		= 30000
+Delay_Scare_Aggressive	= 30000
 
 ;---------------------------
 
@@ -335,6 +335,27 @@ stand_attack_0	=	  	0.30,		0.20,		    50,        0.0, 1.0, 1.0,		 -1.6, 1.6, -1.
 ;Left hand Strike2
 stand_attack_1	=	  	0.30,		0.15,		    50,        0.0, 1.0, 1.0,		 -1.6, 1.6, -1.6, 1.6,							  3.5
 
+[m_poltergeist_attack_effector]
+
+duality_h		= 0.0
+duality_v		= 0.0
+blur			= 0.0
+gray			= 0.0
+noise_intensity = 0.0
+noise_grain		= 0.0
+noise_fps		= 30
+color_base		= 0.65,0.15,0.1
+color_gray		= 0.333,0.333,0.333
+color_add		= 0,0,0
+time			= 0.0
+time_attack		= 0.0		; fade in
+time_release	 = 0.0		; fade out
+
+; camera effects
+ce_time				= 0.0 ;time
+ce_amplitude		= 0.0
+ce_period_number	= 0.0
+ce_power			= 0.0 ; power
 
 [m_poltergeist_step_params]                ;left             right            right           left
 ;------------------------------------------------------------------------------------------------------------------
@@ -365,6 +386,172 @@ chemical_burn_immunity = 0.0 ; = 3.0 ; 	= 0.0
 explosion_immunity 	= 0.74
 fire_wound_immunity 	= 0.92
 
+;===========================================================================
+; TELE
+;===========================================================================
+[m_poltergeist_normal_tele]:m_poltergeist_e
+$spawn               = "monsters\poltergeists\poltergeist_normal_tele"
+rank					= 11
+spec_rank				= normal
+
+kind                = SM_POLTER_G		; Fake class
+
+detection_pp_effector_name  =	poltergeist_detection_effector
+detection_near_range_factor	=	2
+detection_far_range_factor	=	1
+detection_far_range			=	50
+detection_speed_factor		=	4.0
+detection_loose_speed		=	2.0
+detection_success_level		=	10.0
+detection_max_level			=   15.0
+detection_fly_around_level	=	5.0
+detection_fly_around_distance	= 30.0
+detection_fly_around_change_direction_time	= 5 ; sec
+
+type				= telekinetic
+immunities_sect		= poltergeist_tele_immunities
+
+Tele_Fly_Time					= 0.0
+Tele_Fly_Velocity				= 0
+
+Tele_Find_Radius				= 0
+Tele_Object_Min_Mass			= 0
+Tele_Object_Max_Mass			= 0
+Tele_Object_Count				= 0
+Tele_Hold_Time					= 0
+Tele_Wait_Time					= 1000
+Tele_Delay_Between_Objects_Time	= 9000
+Tele_Distance					= 0
+Tele_Object_Height				= 0
+Tele_Time_Object_Keep			= 0
+Tele_Raise_Speed				= 0
+Tele_Delay_Between_Objects_Raise_Time	= 9000
+Tele_Collision_Damage				= 0.0
+
+
+Particles_Damage				= monsters\polter_damage
+Particles_Death					= monsters\polter_death_00
+Particles_Idle					= monsters\polter_idle
+Particles_Hidden				= monsters\polter_linza
+
+
+Hidden_Particles				= monsters\polter_linza
+;Hide_Particles					= monsters\polter_yadro;monsters\polter_hide
+
+Sound_Idle						= monsters\poltergeist\tele_idle_0
+sound_take_damage				= monsters\poltergeist\tele_damage_
+sound_die						= monsters\poltergeist\tele_death_
+
+sound_tele_hold					= monsters\burer\burer_tele_hold
+sound_tele_throw				= monsters\burer\burer_tele_throw
+
+[poltergeist_tele_immunities]
+burn_immunity = 0.0 ; 		= 0.0					;������������ ����������
+strike_immunity 	= 0.5
+shock_immunity = 0.0 ; 		= 0.0
+wound_immunity 		= 0.3
+radiation_immunity 	= 0.0
+telepatic_immunity 	= 0.0
+chemical_burn_immunity = 0.0 ; = 3.0 ; 	= 0.0
+explosion_immunity 	= 0.5
+fire_wound_immunity 	= 0.9
+
+;===========================================================================
+; FLAMER
+;===========================================================================
+
+[m_poltergeist_normal_flame]:m_poltergeist_e
+$spawn               = "monsters\poltergeists\poltergeist_normal_flame"
+rank					= 12
+spec_rank				= normal
+class                = SM_POLTR					; AI class
+kind                = SM_PYRO_G		; Fake class
+
+fire_max_distance			=	0
+fire_max_power				=	0.0
+
+detection_pp_effector_name  =	poltergeist_detection_effector
+detection_near_range_factor	=	2
+detection_far_range_factor	=	1
+detection_far_range			=	50
+detection_speed_factor		=	4.0
+detection_loose_speed		=	2.0
+detection_success_level		=	10.0
+detection_max_level			=   15.0
+detection_fly_around_level	=	5.0
+detection_fly_around_distance	= 8.0
+detection_fly_around_change_direction_time	= 5 ; sec
+
+type					= flamer
+immunities_sect		= poltergeist_flame_immunities
+flame_hit_value			= 0.0
+
+flame_sound				= monsters\poltergeist\attack_hit_flame
+flame_particles_prepare	= monsters\polter_yadro
+flame_particles_fire	= static\monsters_fire_idle
+flame_particles_stop	= static\monsters_fire_stop
+flame_fire_time_delay	= 1062 ;2400							; don't change - for programmers only
+flame_fire_time_play	= 6343
+flame_length			= 7.63
+flame_hit_value			= 0.18
+flame_hit_delay			= 200
+flames_count			= 3
+flames_delay			= 1542	;3500	;2000
+flame_aura_radius		= 0
+
+flame_scan_radius		= 0
+flame_scan_sound			= monsters\burer\burer_scan_affect_0
+flame_scan_effector_section	= m_poltergeist_scan_effector
+flame_scan_delay_min_max	= 5000,10000
+
+flame_min_dist			= 0
+flame_max_dist			= 0
+flame_min_height		= 0.0
+flame_max_height		= 0.0
+
+Particles_Damage				= monsters\polter_damage
+Particles_Death					= monsters\polter_death_00
+Particles_Idle					= monsters\polter_idle_00
+Particles_Hidden				= monsters\polter_linza_00
+
+;;;;;;;;;;;;;
+radiation_max_distance		=	36
+radiation_max_power			=	0
+radiation_pp_effector_name	= 	postprocess_rad	
+radiation_sound			= detectors\da-2_beep1.ogg, 3.0
+radiation_linear_factor		=	1
+radiation_quadratic_factor	=	0.005
+radiation_pp_highest_at		= 	0.05
+
+fire_max_distance			=       12
+fire_max_power				=	0.45 ;0.95
+fire_linear_factor			=	1
+fire_quadratic_factor		=	0.01
+pp_effector_name			= 	postprocess_thermal
+pp_highest_at				= 	0.02
+
+;psy_linear_factor		=	1.3
+;psy_quadratic_factor	=	0.018
+;psy_max_distance		=	38.0
+;psy_max_power			=	3.25
+;psy_sound				=	anomaly\psy_polter		;monsters\controller\controller_presence_l
+;psy_pp_effector_name	= 	psy_antenna 				;postprocess_psi
+;psy_pp_highest_at		= 	0.2
+;;;;;;;;;;;;;
+
+Hidden_Particles				= monsters\polter_linza_00	;monsters\polter_hidden
+Sound_Idle						= monsters\poltergeist\fire_idle_0
+
+[poltergeist_flame_immunities]
+burn_immunity = 0.0 ; 		= 0.0					;������������ ����������
+strike_immunity 	= 0.5
+shock_immunity = 0.0 ; 		= 0.0
+wound_immunity 		= 0.3
+radiation_immunity 	= 0.0
+telepatic_immunity 	= 0.0
+chemical_burn_immunity = 0.0 ; = 3.0 ; 	= 0.0
+explosion_immunity 	= 0.66
+fire_wound_immunity 	= 0.84
 
 
 
@@ -386,8 +573,8 @@ time_release		= 0.85		; fade out
 
 [poltergeist_fake]:m_poltergeist_normal_tele
 $spawn               = "monsters\poltergeists\poltergeist_fake"
-;Tele_Find_Radius				= 0
-;Tele_Object_Count				= 0 ;7
+Tele_Find_Radius				= 0
+Tele_Object_Count				= 0 ;7
 
 detection_far_range			=	145
 detection_speed_factor		=	6.0 ;4.0
@@ -396,9 +583,9 @@ detection_loose_speed		=	4.0 ;2.0
 detection_near_range_factor	=	1
 detection_far_range_factor	=	1
 
-;Tele_Time_Object_Keep			= 0 ;5000
-Height_Min				=	0.4
-Height_Max				=	0.9
+Tele_Time_Object_Keep			= 0 ;5000
+Height_Min				=	0.0
+Height_Max				=	0.0
 
 [pri_a25_poltergeist]:m_poltergeist_normal_tele
 $spawn               = "monsters\poltergeists\pri_a25_poltergeist"
@@ -407,8 +594,8 @@ detection_loose_speed		=	4.0;
 
 [labx8_poltergeist]:m_poltergeist_normal_tele
 $spawn               = "monsters\poltergeists\labx8_poltergeist"
-;Tele_Find_Radius				= 0
-;Tele_Object_Count				= 0 ;4;7
+Tele_Find_Radius				= 0
+Tele_Object_Count				= 0 ;4;7
 
 detection_far_range			=	145
 detection_speed_factor		=	6.0 ;4.0
@@ -417,9 +604,9 @@ detection_loose_speed		=	4.0 ;2.0
 detection_near_range_factor	=	1
 detection_far_range_factor	=	1
 
-;Tele_Time_Object_Keep			= 0 ;5000
-Height_Min				=	0.4
-Height_Max				=	0.9
+Tele_Time_Object_Keep			= 0 ;5000
+Height_Min				=	0.0
+Height_Max				=	0.0
 
 ;===========================================================================
 ; Black poltergeist - Borovos 2014
@@ -479,8 +666,8 @@ Particles_Death					= monsters\polter_black_death
 Particles_Idle					= monsters\polter_black_idle
 Particles_Hidden				= monsters\polter_black_hidden
 
-;sound_tele_hold					= monsters\burer\burer_tele_hold
-;sound_tele_throw				= monsters\burer\burer_tele_throw
+sound_tele_hold					= monsters\burer\burer_tele_hold
+sound_tele_throw				= monsters\burer\burer_tele_throw
 
 Hidden_Particles				= monsters\polter_black_hidden; monsters\polter_linza_00	;monsters\polter_hidden
 Sound_Idle						= monsters\poltergeist\black_idle

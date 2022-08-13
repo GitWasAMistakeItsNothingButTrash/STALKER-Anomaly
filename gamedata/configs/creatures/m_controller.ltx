@@ -218,8 +218,8 @@ distant_idle_sound_delay	= 80000
 distant_idle_sound_range	= 100.0
 
 
-;sound_control_start		= monsters\controller\controller_control1
-s;ound_control_hit		= monsters\controller\controller_control2
+sound_control_start		= monsters\controller\controller_control1
+sound_control_hit		= monsters\controller\controller_control2
 
 SoundThreshold		 = 0.06             ; range [0..1]
 max_hear_dist		 = 60;
@@ -245,6 +245,7 @@ DamagedThreshold		= 0.25
 material				= creatures\medium
 DynamicObjectsCount		= 8
 
+attack_effector			= m_controller_attack_effector
 
 attack_params			= m_controller_attack_params
 step_params				= m_controller_step_params
@@ -260,26 +261,26 @@ tube_condition_min_distance = 3.5
 tube_at_once			    = false ; true for test-mode
 
 
-;control_fx_texture		= act\act_controller_hit
-;control_fx_texture2		= act\act_controller_hit1
+control_fx_texture		= act\act_controller_hit
+control_fx_texture2		= act\act_controller_hit1
 
 
 ; Controlling ability properties
-;Max_Controlled_Count	= 0;4
+Max_Controlled_Count	= 0
 
-;control_effector			= controller_control_effector
+control_effector			= controller_control_effector
 
 Friend_Community_Overrides	= monolith
 
 ;-------------------------------------------------------------------------
 ; Anti-aim Ability
 ;-------------------------------------------------------------------------
-;anti_aim_timeout				=	4 ; sec
-;anti_aim_effectors				=	effector_monster_hit_1, effector_monster_hit_2, effector_monster_hit_3, effector_monster_hit_4
-;anti_aim_animation				=	stand_attack_
-;anti_aim_max_angle				=	0.5
-;anti_aim_detection_gain_speed	=	1
-;anti_aim_detection_loose_speed	=	0.1
+anti_aim_timeout				=	0 ; sec
+anti_aim_effectors				=	effector_monster_hit_1, effector_monster_hit_2, effector_monster_hit_3, effector_monster_hit_4
+anti_aim_animation				=	stand_attack_
+anti_aim_max_angle				=	0.0
+anti_aim_detection_gain_speed	=	1
+anti_aim_detection_loose_speed	=	0.1
 
 ;-------------------------------------------------------------------------
 Control_Hit					= weapons\generic_weapon_controller
@@ -360,7 +361,54 @@ chemical_burn_immunity = 0.1 ; = 3.0 ; 		= 0.3
 explosion_immunity 					= 0.9
 fire_wound_immunity  				= 1.0
 
+;=========================================================================================
+; CONTROL Effector
+;==========================================================================================
+[controller_control_effector]
+duality_h		= 0 ;  0.1	;0.31
+duality_v		= 0 ;  0.2	;0.31
+blur			= 0 ;  0.01
+gray			= 0 ;  0.5	;0.5
+noise_intensity = 0 ;  1.0
+noise_grain		= 0 ;  0.9
+noise_fps		= 0 ;  30
+color_base		= 0 ;  1.1,1.1,1	;0.1,0.15,0.4
+color_gray		= 0 ;  1,1,1		;0.333,0.333,0.333
+color_add		= 0 ;  0.2,0.2,0.1
+time			= 0 ;  1.0		;1.5
+time_attack		= 0 ;  0.3		;0.5		; fade in
+time_release	= 0 ;  0.5		; fade out
 
+; camera effects
+ce_time				= 0 ;  1.0	;1.5
+ce_amplitude		= 0 ;  20.0
+ce_period_number	= 0 ;  1.0
+ce_power			= 0 ;  0.7
+
+;==========================================================================================
+; Psy Attack Effector
+;==========================================================================================
+[m_controller_attack_effector]
+
+duality_h		= 0 ; 0.01
+duality_v		= 0 ; 0.01
+blur			= 0 ; 0.01
+gray			= 0 ; 0.5
+noise_intensity = 0 ; 0.0
+noise_grain		= 0 ; 1
+noise_fps		= 0 ; 30
+color_base		= 0 ; 0.65,0.15,0.1
+color_gray		= 0 ; 0.333,0.333,0.333
+color_add		= 0 ; 0,0,0
+time			= 0 ; 0.3
+time_attack		= 0 ; 0.05		; fade in
+time_release	        = 0 ; 0.20		; fade out
+
+; camera effects
+ce_time				= 0 ; 0.40 ;time
+ce_amplitude		= 0 ; -15.0
+ce_period_number	= 0 ; 1.5 ;2.0
+ce_power			= 0 ; 0.7 ;0.7 ; power
 
 ;=========================================================================================
 ; Aura PP Effector

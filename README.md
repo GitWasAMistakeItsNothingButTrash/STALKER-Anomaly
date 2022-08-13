@@ -5,7 +5,7 @@
   (As with DrX Dynamic Faction Relations, this is not compatible with Story Mode.) \
   *Done*
 
-- Remove nazi (Addaraya, Bi-2, Firelake, Shnur), pederast (Shnur, tATu) and other western (America, Blue States, Croce, Dazeem, Dire Straits, Eagles, Hendrix, Pink Floyd, Radiohead, Scorpions, Soulsavers, Tito & Tarantula, U2, Vaughan) cancer from the soundtrack. \
+- Remove nazi (Addaraya, Bi-2, Firelake, Shnur), pederast (Shnur, tATu) and other western (America, Blue States, J. Croce, A. Dazeem, Dire Straits, Eagles, J. Hendrix, Pink Floyd, Radiohead, Scorpions, Soulsavers, Tito & Tarantula, U2, S.R. Vaughan) cancer from the soundtrack. \
   *Done*
 
 - Reorganize radio stations into one lyrical and one instrumental. \
@@ -25,7 +25,7 @@
 
 - Spawn definitions are encrypted in a perl file that is too large to edit conveniently.
 
-- Removing creatures completely causes game to not launch. Possibly unremoved creature configs must in same folder with edited creature registry. Possibly (some) removed creature configs must be present in some form.
+- Removing creatures completely causes game to not launch. ~~Possibly unremoved creature configs must in same folder with edited creature registry.~~ Possibly (some) removed creature configs must be present in some form.
 
 - Radio tracks play when player radio is off and no other radios are nearby.
 

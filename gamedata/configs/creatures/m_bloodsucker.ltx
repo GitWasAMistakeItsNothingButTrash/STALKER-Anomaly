@@ -109,8 +109,8 @@ Velocity_Drag           = 1.5,    4.0,          4.0,         1,       1
 Velocity_Steal          = 0.7,    4.0,          4.0,         1,       1
 
 ; Speed factors while invisible
-;Velocity_Invisible_Linear   = 0
-;Velocity_Invisible_Angular  = 0
+Velocity_Invisible_Linear   = 0
+Velocity_Invisible_Angular  = 0
 
 ;----------------------------------------------------------------------------
 ; Movement::Velocities & Acceleration
@@ -231,11 +231,11 @@ idle_sound_delay      = 95000
 eat_sound_delay       = 3000
 attack_sound_delay      = 1000 ;6000
 
-;Sound_Invisibility_Change_State   = monsters\bloodsucker\invisible
-;Sound_Vampire_Grasp         = monsters\bloodsucker\vampire_grasp
-;Sound_Vampire_Sucking       = monsters\bloodsucker\vampire_sucking
-;Sound_Vampire_Hit         = monsters\bloodsucker\vampire_hit
-;Sound_Vampire_StartHunt       = monsters\bloodsucker\vampire_grasp
+Sound_Invisibility_Change_State   = monsters\bloodsucker\invisible
+Sound_Vampire_Grasp         = monsters\bloodsucker\vampire_grasp
+Sound_Vampire_Sucking       = monsters\bloodsucker\vampire_sucking
+Sound_Vampire_Hit         = monsters\bloodsucker\vampire_hit
+Sound_Vampire_StartHunt       = monsters\bloodsucker\vampire_grasp
 Sound_Growl             = monsters\bloodsucker\sucker_growl_
 Sound_Alien             = monsters\bloodsucker\sucker_breath_
 
@@ -296,6 +296,33 @@ LegsCount           = 2
 ;species of monster
 species             = bloodsucker
 
+;-------------------------------------------------------------------------
+; Invisible Ability
+;-------------------------------------------------------------------------
+Particle_Invisible        = anomaly2\bloodsucker_shield
+Particles_Invisible_Tracks    = monsters\bloodsucker_step
+Particles_Invisible_Tracks_Freq = 1
+
+Invisibility_BlinkTime                = 0
+Invisibility_BlinkMicroInterval           = 0
+Invisibility_EnergySpeed              = 0.0
+
+full_visibility_radius = 0
+partial_visibility_radius = 0
+no_visibility_radius   = 0
+
+visibility_state_change_min_delay = 1000 ; ms
+
+;-------------------------------------------------------------------------
+; Vampire Ability
+;-------------------------------------------------------------------------
+
+Vampire_Delay      = 5000
+Vampire_Want_Speed = 0.0
+Vampire_Wound      = 0.2
+Vampire_GainHealth = 0.0 ; how many hp to restore?
+Vampire_Sufficient_Hits = 5
+Vampire_Distance   = 1 ; may artifact when < 1
 
 ;-------------------------------------------------------------------------
 ; Predator Ability
@@ -464,7 +491,7 @@ stand_attack_1 =      0.30,   1.1,       50,        0.0, 2.0, 4.0,     -0.6, 0.6
 ;Right hand Strike
 stand_attack_2 =      0.30,   0.95,       50,       -4.0, 2.5, 0.50,    -0.6, 0.6, -0.6, 0.6,          2.2
 ;Right hand Strike
-;vampire_2   =     	  0.60,   0.85,       50,        0.0, 2.5, 4.50,    -1.2, 1.2, -1.2, 1.2,	       4.5
+vampire_2   =     	  0.60,   0.85,       50,        0.0, 2.5, 4.50,    -1.2, 1.2, -1.2, 1.2,	       4.5
 
 stand_run_attack_left_0  = 0.30,   0.8,       50,        3.5, 2.0, 0.5,     -1.0, 1.0, -1.0, 1.0,     2.5
 stand_run_attack_right_0 = 0.30,   0.8,       50,        3.5, 2.0, 0.5,     -1.0, 1.0, -1.0, 1.0,     2.5
@@ -486,17 +513,17 @@ fire_wound_immunity     = 0.8
 ;===========================================================================
 ; SPECIAL EFFECTORS
 ;===========================================================================
-;[m_bloodsucker_vampire_effector]
-;duality_h     	= 0.08
-;duality_v     	= 0.06
-;blur        	= 0.71
-;gray        	= 0.5
-;noise_intensity = 0.5
-;noise_grain     = 0.3
-;noise_fps     	= 30
-;color_base      = 0.255,0.0,0.0
-;color_gray      = 0.333,0.333,0.333
-;color_add     	= 0,0,0
+[m_bloodsucker_vampire_effector]
+duality_h     	= 0.0
+duality_v     	= 0.0
+blur        	= 0.0
+gray        	= 0.0
+noise_intensity = 0.0
+noise_grain     = 0.0
+noise_fps     	= 30
+color_base      = 0.255,0.0,0.0
+color_gray      = 0.333,0.333,0.333
+color_add     	= 0,0,0
 
 [m_bloodsucker_attack_effector]
 duality_h     	= 0.08
@@ -544,7 +571,7 @@ MaxHealthValue         = 0.75              ; range [0..200]
 
 skin_armor = 0.25
 
-;invisibility_activate_delay = 5000
+invisibility_activate_delay = 5000
 
 [bloodsucker_immunities_weak]
 burn_immunity = 1.5 ; 5.0 ; 				= 0.8			;Factors of immunity
@@ -569,7 +596,7 @@ stand_attack_1 =      0.30,   0.95,      50,        0.0, 2.0, 4.0,     	-0.8, 0.
 ;Right hand Strike
 ;stand_attack_2 =      0.30,   0.9,      50,       -4.0, 2.5, 0.50,   	-1.0, 1.0, -1.0, 1.0,         2.5
 ;Right hand Strike
-;vampire_2   =     	  0.60,   0.65,      50,        0.0, 2.5, 4.50,     -1.2, 1.2, -1.2, 1.2,         4.5
+vampire_2   =     	  0.60,   0.65,      50,        0.0, 2.5, 4.50,     -1.2, 1.2, -1.2, 1.2,         4.5
 
 
 stand_run_attack_left_0  = 0.30,   0.72,       65,        3.5, 2.0, 0.5,     -1.0, 1.0, -1.0, 1.0,     2.5
@@ -588,8 +615,8 @@ Velocity_Drag           = 1.5,    4.0,          4.0,         1,       1
 Velocity_Steal          = 0.7,    4.0,          4.0,         1,       1
 
 ; Speed factors while invisible
-;Velocity_Invisible_Linear   = 0
-;Velocity_Invisible_Angular  = 0
+Velocity_Invisible_Linear   = 0
+Velocity_Invisible_Angular  = 0
 
 ; acceleration
 Accel_Generic         = 1.5
@@ -614,7 +641,7 @@ immunities_sect   = bloodsucker_immunities_normal
 attack_params   = bloodsucker_attack_params_normal
 spec_rank     = normal
 community     = bloodsucker
-;invisibility_activate_delay = 3500
+invisibility_activate_delay = 3500
 protections_sect = bloodsucker_protections
 
 MaxHealthValue         = 1.0              ; range [0..200]
@@ -643,7 +670,7 @@ stand_attack_1 =      0.30,   1.2,     65,        0.0, 2.0, 4.0,     	-0.8, 0.8,
 ;Right hand Strike
 stand_attack_2 =      0.30,   1.15,     60,        -4.0, 2.5, 0.50,   	-1.0, 1.0, -1.0, 1.0,          	2.5
 ;Right hand Strike
-;vampire_2   =     	  0.60,   0.90,      50,        0.0, 2.5, 4.50,     -1.2, 1.2, -1.2, 1.2,         	2 ;4.5
+vampire_2   =     	  0.60,   0.90,      50,        0.0, 2.5, 4.50,     -1.2, 1.2, -1.2, 1.2,         	2 ;4.5
 ;Right hand Strike
 
 stand_run_attack_left_0  = 0.30,   0.87,       50,        3.5, 2.0, 0.5,     -1.0, 1.0, -1.0, 1.0,     2.5
@@ -662,8 +689,8 @@ Velocity_Drag           = 1.5,    4.0,          4.0,         1,       1
 Velocity_Steal          = 0.7,    4.0,          4.0,         1,       1
 
 ; Speed factors while invisible
-;Velocity_Invisible_Linear   = 0
-;Velocity_Invisible_Angular  = 0
+Velocity_Invisible_Linear   = 0
+Velocity_Invisible_Angular  = 0
 
 ; acceleration
 Accel_Generic         = 1.5
@@ -684,7 +711,7 @@ immunities_sect   = bloodsucker_immunities_strong
 attack_params   = bloodsucker_attack_params_strong
 spec_rank     = strong
 community     = bloodsucker
-;invisibility_activate_delay = 1500
+invisibility_activate_delay = 1500
 protections_sect = bloodsucker_protections
 
 MaxHealthValue         = 1.5              ; range [0..200]
@@ -713,7 +740,7 @@ stand_attack_1 =      0.30,   1.5,    	75,        0.0, 2.0, 4.0,     	-0.8, 0.8,
 ;Right hand Strike
 stand_attack_2 =      0.30,   1.35,      65,       -4.0, 2.5, 0.50,   	-1.0, 1.0, -1.0, 1.0,          	2.5
 ;Right hand Strike
-;vampire_2      =      0.60,   1.15,    	75,        0.0, 2.5, 4.50,     -1.2, 1.2, -1.2, 1.2,         	4.5
+vampire_2      =      0.60,   1.15,    	75,        0.0, 2.5, 4.50,     -1.2, 1.2, -1.2, 1.2,         	4.5
 
 
 stand_run_attack_left_0  = 0.30,   1.05,       65,        3.5, 2.0, 0.5,     -1.0, 1.0, -1.0, 1.0,     2.5
@@ -732,8 +759,8 @@ Velocity_Drag           = 1.5,    4.0,          4.0,         1,       1
 Velocity_Steal          = 0.7,    4.0,          4.0,         1,       1
 
 ; Speed factors while invisible
-;Velocity_Invisible_Linear   = 0
-;Velocity_Invisible_Angular  = 0
+Velocity_Invisible_Linear   = 0
+Velocity_Invisible_Angular  = 0
 
 ; acceleration
 Accel_Generic         = 1.5

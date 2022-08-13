@@ -12,7 +12,7 @@
   *Done*
 
 - Remove monsters that are silly (bloodsuckers, burers, controllers, karliks, phantoms, poltergeists, psydogs, psysuckers) or redundant (boryas, fractures, snorks, zombies [not to be confused with zombifieds]). \
-  *~~Removed from spawn registry.~~ Set to non-hostile. smart_terrain_choose_interval = 99:59:59. can_spawn_phantom=false. Removed silly abilities (telekinesis, possession, invisibility or spawning phantoms, etc.) from monster configs. Requires rigorous testing.*
+  *~~Removed from spawn registry.~~ Set to non-hostile. smart_terrain_choose_interval = 99:59:59. can_spawn_phantom=false. Removed silly abilities (telekinesis, possession, invisibility or spawning phantoms, etc.) from monster configs.*
 
 - Edit loadouts so factions use weapons and ammo that make some semblance of sense. \
 (For example, UN operatives would never be deployed with a sawn-off TOZ-66, have no guns that can even mount a PSO scope, and have no need of an MP5A3 or UMP45 when an MP5SD6 and P90 are available to them.) \
@@ -25,7 +25,9 @@
 
 - Spawn definitions are encrypted in a perl file that is too large to edit conveniently.
 
-- Removing creatures completely causes game to not launch. ~~Possibly unremoved monster configs must in same folder with edited creature registry.~~ Possibly ~~(some)~~ removed monster configs must be present in some form.
+- ~~Removing creatures from spawn registry causes game to not launch.~~
+
+- Removing abilities from monster configs causes game to not launch.
 
 - Radio tracks play when player radio is off and no other radios are nearby.
 

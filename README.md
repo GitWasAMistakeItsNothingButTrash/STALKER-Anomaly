@@ -11,7 +11,7 @@
 - Reorganize radio stations into one lyrical and one instrumental. \
   *Done*
 
-- Remove monsters that are silly (bloodsuckers, burers, controllers, karliks, phantoms, poltergeists, psydogs, psysuckers) or redundant (boryas, fractures, snorks, zombies [not to be consused with zombifieds]). \
+- Remove monsters that are silly (bloodsuckers, burers, controllers, karliks, phantoms, poltergeists, psydogs, psysuckers) or redundant (boryas, fractures, snorks, zombies [not to be confused with zombifieds]). \
   *~~Removed from spawn registry.~~ Set to non-hostile. smart_terrain_choose_interval = 99:59:59. can_spawn_phantom=false. Removed silly abilities (telekinesis, possession, invisibility or spawning phantoms, etc.) from monster configs. Requires rigorous testing.*
 
 - Edit loadouts so factions use weapons and ammo that make some semblance of sense. \

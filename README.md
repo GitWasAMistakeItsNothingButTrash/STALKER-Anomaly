@@ -12,7 +12,7 @@
   *Done*
 
 - Remove creatures that are silly (such as those with psy abilities, such as telekinesis, possession, invisibility or spawning phantoms) or redundant (all variants of human zombies that are classed as monsters rather than stalkers). \
-  *Set to non-hostile and ~~removed from spawn registry~~ can_spawn_phantom=false. Remove silly abilities from creature configs. Requires testing.*
+  *Set to non-hostile. ~~Removed from spawn registry~~ smart_terrain_choose_interval = 99:59:59. can_spawn_phantom=false. Removed silly abilities from creature configs. Requires rigorous testing.*
 
 - Edit loadouts so factions use weapons and ammo that make some semblance of sense. \
 (For example, UN operatives would never be deployed with a sawn-off TOZ-66, have no guns that can even mount a PSO scope, and have no need of an MP5A3 or UMP45 when an MP5SD6 and P90 are available to them.) \

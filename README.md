@@ -17,6 +17,9 @@
 - Edit loadouts so factions use weapons and ammo that make some semblance of sense. \
 (For example, UN operatives would never be deployed with a sawn-off TOZ-66, have no guns that can even mount a PSO scope, and have no need of an MP5A3 or UMP45 when an MP5SD6 and P90 are available to them.) \
   *Item tabulation in progress*
+  
+- Replace silly anomalies (burn, explosion, light_burn, shock, strike, telepatic [sic] except where appropriate [e.g. camp fires should burn, landmines should explode]) with sensible ones (chemical_burn and especially radiation). \
+  *~~Removed from zone registry.~~*
 
 
 ## Issues:
@@ -24,6 +27,8 @@
 - Something is causing the game to become stuttery in combat and prone to crashing in NPC crowds.
 
 - Spawn definitions are encrypted in a perl file that is too large to edit conveniently.
+
+- ~~Removing anomaly configs from zone registry causes game to not launch.~~
 
 - ~~Removing monster configs from creature registry causes game to not launch.~~
 

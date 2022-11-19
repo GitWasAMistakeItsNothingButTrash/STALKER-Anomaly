@@ -26,7 +26,7 @@
 
 - Something is causing the game to become stuttery in combat and prone to crashing in NPC crowds.
 
-- Spawn definitions are encrypted in a perl file that is too large to edit conveniently.
+- Spawn definitions are in an obfuscated perl file that is too large to edit or bruteforce conveniently.
 
 - ~~Removing anomaly configs from zone registry causes game to not launch.~~
 

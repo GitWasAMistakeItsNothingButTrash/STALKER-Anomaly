@@ -21,6 +21,8 @@
 - Replace silly anomalies (burn, explosion, light_burn, shock, strike, telepatic [sic] except where appropriate [e.g. camp fires should burn, landmines should explode]) with sensible ones (chemical_burn and especially radiation). \
   *~~Removed from zone registry.~~*
 
+- Remove exoskeletons and heavy armor that prevent running.
+
 
 ## Issues:
 

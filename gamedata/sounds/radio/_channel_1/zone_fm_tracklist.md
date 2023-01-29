@@ -12,8 +12,6 @@ Bandit Mazurka (vocal)
 
 Korsika - Neverland
 
-Jarka Iracema - Tachanka
-
 Kino - Gruppa Krovi
 
 Kino - Pachka Sigaret
@@ -31,6 +29,8 @@ Lyube - Tam Za Tumanami
 Mikhail Krug - Prikhodite v Moy Dom
 
 Mikhail Shufutinsky - Moskva-Vladivostok
+
+Oktoberklub - Tachanka
 
 Samotsvety - Uvizu Tebya Ya v Tundru
 
